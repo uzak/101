@@ -9,6 +9,10 @@ Introduction into procedural programming with Python. For more detailed intro, p
 * Easy syntax
 
 ```python
+>>> 1 + 1
+2
+>>> len("Hello world")
+11
 >>> users = [l.split(":")[0] for l in open("/etc/passwd")]
 >>> users
 ['root',
@@ -18,10 +22,6 @@ Introduction into procedural programming with Python. For more detailed intro, p
 ]
 >>> len(users)
 52
->>> 1 + 1
-2
->>> len("Hello world")
-11
 ```
 
 
@@ -65,10 +65,10 @@ Introduction into procedural programming with Python. For more detailed intro, p
 ```
 
 
-### Complex
+### Collections
 
 * Strings
-* (few) operators, many methods
+* (few) operators (*, +, in), many methods
 * fStrings
 * immutable
 * IO in scripts: input(), print()
@@ -101,10 +101,10 @@ Martin
 Hello Martin!
 ```
 
-### Complex contd.
-* sequences, like string
-* tuple - not mutable
+### Collections contd.
+* tuple (not mutable)
 * list
+* slicing
 * sorted()
 
 ```python
@@ -130,7 +130,7 @@ True
 >>> 
 ```
 
-### Complex contd.
+### Collections contd.
 * associative arrays (hashing), but also iterable
 * dictionary
 * set
@@ -209,11 +209,11 @@ None
 (0, 'Peter')
 (1, 'John')
 >>> 
->>> to_be_done = 3
->>> while to_be_done > 0:
+>>> count = 3
+>>> while count > 0:
 ...  # do something
-...  to_be_done = to_be_done -1
-...  to_be_done
+...  count = count -1
+...  count
 ... 
 2
 1
