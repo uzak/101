@@ -1,4 +1,4 @@
-# Python: procedural programming 101
+# Python: Procedural Programming 101
 
 Introduction into procedural programming with Python. For more detailed intro, please see the official [tutorial](https://docs.python.org/3/tutorial/index.html).
 
@@ -13,21 +13,13 @@ Introduction into procedural programming with Python. For more detailed intro, p
 2
 >>> len("Hello world")
 11
->>> users = [l.split(":")[0] for l in open("/etc/passwd")]
->>> users
-['root',
- 'daemon',
- ...
- 'sshd',
-]
->>> len(users)
-52
 ```
 
 
 ## Variables
 * placeholder for changing data
 * meaningful names important
+* the longer the lifespan the longer the name
 * English
 * private names start with _, super-duper private __, magic start and end with __
 
@@ -89,6 +81,8 @@ False
 1
 >>> name.index('n')
 5
+>>> "World" in "Hello World"
+True
 ```
 
 ```shell
@@ -108,17 +102,17 @@ Hello Martin!
 * sorted()
 
 ```python
->>> v = (1, 2, 3)
+>>> v = (1, 2, 3)    # tuple of three elements
 >>> v
 (1, 2, 3)
 >>> v[0]
 1
->>> v[0:-1]
+>>> v[0:-1]         # slicing
 (1, 2)
 >>> 1 in v
 True
->>> l = [200, 150, 200]
->>> l[1] = 120
+>>> l = [200, 150, 200] # list of three elements
+>>> l[1] = 120          # lists are mutable
 >>> l
 [200, 120, 200]
 >>> sorted(l)
@@ -127,7 +121,8 @@ True
 120
 >>> max(l)
 200
->>> 
+>>> len(l)
+3
 ```
 
 ### Collections contd.
@@ -136,10 +131,12 @@ True
 * set
 
 ```python
->>> s = {200, 120, 200}
+>>> s = {200, 120, 200} # no duplicates in a set
 >>> s
 {200, 120}
->>> d = {'Martin': 20, 'Peter': 25}
+>>> 120 in s
+True
+>>> d = {'Martin': 20, 'Peter': 25} # `d` stands for dictionary (key - value pairs)
 >>> d
 {'Martin': 20, 'Peter': 25}
 >>> d['Peter']
@@ -192,28 +189,27 @@ None
 
 ```python
 >>> for i in (1, 2, 3):
-...  i**2
+...  print(i**2)
 ... 
 1
 4
 9
 >>> for i in range(3):
-...  i
+...  print(i)
 ... 
 0
 1
 2
 >>> for idx, name in enumerate(["Peter", "John"]):
-...  idx, name
+...  print(idx, name)
 ... 
-(0, 'Peter')
-(1, 'John')
->>> 
+0 Peter
+1 John
 >>> count = 3
 >>> while count > 0:
 ...  # do something
 ...  count = count -1
-...  count
+...  print(count)
 ... 
 2
 1
@@ -223,6 +219,7 @@ None
 
 ## Functions
 ### Builtin functions
+* [docs](https://docs.python.org/3/library/functions.html)
 * dir(), locals()
 * ord(), chr()
 * eval(), exit()
