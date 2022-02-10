@@ -85,13 +85,11 @@ False
 True
 ```
 
-```shell
-➜  ~ cat console_io.py 
-name = input("What's your name?\n")
-print(f"Hello {name}!")
-➜  ~ python console_io.py
+```python
+>>> name = input("What's your name?\n")
 What's your name?
 Martin
+>>> print(f"Hello {name}!")
 Hello Martin!
 ```
 
