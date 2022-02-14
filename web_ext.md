@@ -22,6 +22,12 @@ pipenv check          # security vulnerabilities and PEP 508 req
 
 ### HTML
 * DeveloperTools (CTRL+SHIFT+I)
+    * elements, view source
+
+### HTTP
+* [Client-Server architecture](https://docs.google.com/presentation/d/1PUggE2mhGVsbtOd62m82mNX8pl0P5MsmSrFw5G4zBfw/edit#slide=id.p7)
+* GET vs. POST
+* flask: template_render vs redirect
 
 ### REST
 * Insomnia

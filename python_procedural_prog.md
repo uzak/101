@@ -7,6 +7,7 @@ Introduction into procedural programming with Python. For more detailed intro, p
 * Immediate feedback: No compile, link, build cycle
 * [Batteries](https://docs.python.org/3/library/index.html) included - powerful infrastructure
 * Easy syntax
+* [Intro](https://docs.python.org/3/tutorial/introduction.html):
 
 ```python
 >>> 1 + 1
@@ -63,7 +64,7 @@ Introduction into procedural programming with Python. For more detailed intro, p
 * (few) operators (*, +, in), many methods
 * fStrings
 * immutable
-* IO in scripts: input(), print()
+* [tutorial: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 
 ```python
 >>> name = "Martin"
@@ -125,25 +126,33 @@ True
 
 ### Collections contd.
 * associative arrays (hashing), but also iterable
-* dictionary
+* dictionary (key - value pairs)
 * set
 
 ```python
->>> s = {200, 120, 200} # no duplicates in a set
+>>> s = {200, 120, 200}         # no duplicates in a set
 >>> s
 {200, 120}
 >>> 120 in s
 True
->>> d = {'Martin': 20, 'Peter': 25} # `d` stands for dictionary (key - value pairs)
+>>> d = {'Martin': 20, 'Peter': 25} # `d` like dictionary 
 >>> d
 {'Martin': 20, 'Peter': 25}
 >>> d['Peter']
 25
 >>> "Martin" in d
 True
+>>> for k, v in d.items():  # iterate over all dict items
+...  print(k, v)
+... 
+Martin 20
+Peter 25
 >>> del d['Martin']
 >>> d
 {'Peter': 25}
+>>> d['Joe'] = {'age': 20, 'scores': [1,2]}
+>>> d
+{'Peter': 25, 'Joe': {'age': 20, 'scores': [1, 2]}}
 ```
 
 ## Control Structures
@@ -175,8 +184,28 @@ False
 ...  print(f"{value} is negative")
 ... 
 Value is positive
-None
 >>> 
+```
+
+All values can be used for logic operations. Non-empty values usually yield True. Use bool() to see what it yields.
+```python
+>>> if "":
+...  print("This will never happen!")
+... 
+>>> bool(0)
+False
+>>> bool(1)
+True
+>>> bool(42)
+True
+>>> bool("")
+False
+>>> bool([])
+False
+>>> bool("something")
+True
+>>> bool([1])
+True
 ```
 
 ## Loops
@@ -214,6 +243,32 @@ None
 0
 ```
 
+[Recursion](https://gist.github.com/uzak/d7d38673ba25a63df319f354e96ac094)
+```python
+>>> def multiplicate(a, b):
+...     if a == 1:
+...         return b
+...     else:
+...         return multiplicate(a-1, b) + b
+... 
+>>> print(multiplicate(1, 5))
+5
+>>> # 5
+>>> 
+>>> print(multiplicate(2, 5))
+10
+>>> # multiplicate(1, 5) + 5
+>>> # 5 + 5
+>>> 
+>>> print(multiplicate(3, 5))
+15
+>>> # multiplicate(2, 5) + 5
+>>> #   multiplicate(1, 5) + 5  + 5
+>>> #       5 + 5 + 5
+>>> 
+
+```
+
 
 ## Functions
 ### Builtin functions
@@ -228,8 +283,8 @@ None
 
 ### Custom
 * blackbox, recipe
-* def NAME(POS_ARG, OPT_ARG): code
-* a procedure returns None
+* [defining functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
+* fuction returns something, a procedure always returns None
 * None is returned if no explicit return statement is used
 
 ```python
@@ -246,6 +301,12 @@ None
 ```
 
 ## Modules
+* [tutorial](https://docs.python.org/3/tutorial/modules.html)
 * sys
 * math
 * os
+
+
+
+## IO
+* [tutorial: IO](https://docs.python.org/3/tutorial/inputoutput.html) in scripts: input(), print()
