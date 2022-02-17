@@ -95,8 +95,8 @@ Hello Martin!
 ```
 
 ### Collections contd.
-* tuple (not mutable)
-* list
+* [tuple](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) (not mutable)
+* [list](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
 * slicing
 * sorted()
 
@@ -126,8 +126,8 @@ True
 
 ### Collections contd.
 * associative arrays (hashing), but also iterable
-* dictionary (key - value pairs)
-* set
+* [dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) (key - value pairs)
+* [set](https://docs.python.org/3/tutorial/datastructures.html#sets)
 
 ```python
 >>> s = {200, 120, 200}         # no duplicates in a set
@@ -284,7 +284,7 @@ True
 ### Custom
 * blackbox, recipe
 * [defining functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
-* fuction returns something, a procedure always returns None
+* function returns something, a procedure always returns None
 * None is returned if no explicit return statement is used
 
 ```python
