@@ -34,5 +34,6 @@ pipenv check        # security vulnerabilities and PEP 508 req
 ### REST
 * Insomnia
 * DeveloperTools / copy as curl
+* [Best practices](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-)
   
 ### PyCharm

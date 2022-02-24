@@ -211,7 +211,7 @@ True
 ## Loops
 * iterate: for for sequences 
 * range(), enumerate()
-* while for repetition tied to a logical condition
+* while: for repetition tied to a logical condition
 * recursion
 
 ```python
@@ -284,6 +284,7 @@ True
 ### Custom
 * blackbox, recipe
 * [defining functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
+* function [arguments](https://gist.github.com/uzak/d1c9ed717e2ee4f57a2c6de72c1f249a)
 * function returns something, a procedure always returns None
 * None is returned if no explicit return statement is used
 
