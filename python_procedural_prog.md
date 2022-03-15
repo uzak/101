@@ -19,14 +19,15 @@ Introduction into procedural programming with Python. For more detailed intro, p
 
 ## Variables
 * placeholder for changing data
-* meaningful names important
+* clear, meaningful names important
 * the longer the lifespan the longer the name
-* English
+* use English only
 * private names start with _, super-duper private __, magic start and end with __
 
 ```python
->>> result = 2**8
->>> __name__
+>>> result = 2**8       
+>>> _protected = 42     # you better know what you're doing when you change it
+>>> __name__            # python magic
 '__main__'
 ```
 
@@ -78,10 +79,10 @@ Introduction into procedural programming with Python. For more detailed intro, p
 False
 >>> name.upper()
 'MARTIN'
->>> name.count("a")
-1
 >>> name.index('n')
 5
+>>> "Hello WORLD".count("l")    # l vs. L
+3
 >>> "World" in "Hello World"
 True
 ```
@@ -92,6 +93,8 @@ What's your name?
 Martin
 >>> print(f"Hello {name}!")
 Hello Martin!
+>>> type(name)
+<class 'str'>
 ```
 
 ### Collections contd.
@@ -150,22 +153,25 @@ Peter 25
 >>> del d['Martin']
 >>> d
 {'Peter': 25}
->>> d['Joe'] = {'age': 20, 'scores': [1,2]}
+>>> d['Joe'] = {'age': 20, 'scores': [1,2]} # keys can be complex datatypes
 >>> d
 {'Peter': 25, 'Joe': {'age': 20, 'scores': [1, 2]}}
 ```
 
 ## Control Structures
-* bool
+* bool datatype
 * operators: ==, !=, is, not, <, >
-* if expr: block
+* ```
+  if expr: 
+      block
+    ```
 
 ```python
->>> 1 > 1
+>>> 1 > 1       # comparison produces a bool value
 False
 >>> 1 == 1
 True
->>> True and True
+>>> True and True  # boolean algebra
 True
 >>> True and False
 False
@@ -187,7 +193,7 @@ Value is positive
 >>> 
 ```
 
-All values can be used for logic operations. Non-empty values usually yield True. Use bool() to see what it yields.
+All values can be used for logic operations. Non-empty values usually yield True. Use `bool()` to see what it yields.
 ```python
 >>> if "":
 ...  print("This will never happen!")
@@ -209,10 +215,10 @@ True
 ```
 
 ## Loops
-* iterate: for for sequences 
+* iterate: go trough each element of a sequence
+  * `for`: for sequences 
+  * `while`: for repetition tied to a logical condition
 * range(), enumerate()
-* while: for repetition tied to a logical condition
-* recursion
 
 ```python
 >>> for i in (1, 2, 3):
@@ -284,7 +290,7 @@ True
 ### Custom
 * blackbox, recipe
 * [defining functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
-* function [arguments](https://gist.github.com/uzak/d1c9ed717e2ee4f57a2c6de72c1f249a)
+* input: function [arguments](https://gist.github.com/uzak/d1c9ed717e2ee4f57a2c6de72c1f249a)
 * function returns something, a procedure always returns None
 * None is returned if no explicit return statement is used
 
