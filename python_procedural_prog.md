@@ -82,7 +82,7 @@ False
 >>> name.index('n')
 5
 >>> "Hello WORLD".count("l")    # l vs. L
-3
+2
 >>> "World" in "Hello World"
 True
 ```
@@ -249,6 +249,7 @@ True
 0
 ```
 
+<!--
 [Recursion](https://gist.github.com/uzak/d7d38673ba25a63df319f354e96ac094)
 ```python
 >>> def multiplicate(a, b):
@@ -272,8 +273,8 @@ True
 >>> #   multiplicate(1, 5) + 5  + 5
 >>> #       5 + 5 + 5
 >>> 
-
 ```
+-->
 
 
 ## Functions
