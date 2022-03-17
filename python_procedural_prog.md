@@ -1,6 +1,6 @@
 # Python: Procedural Programming 101
 
-Introduction into procedural programming with Python. For more detailed intro, please see the official [tutorial](https://docs.python.org/3/tutorial/index.html).
+Introduction into procedural programming with Python. For a more detailed intro, please see the official [tutorial](https://docs.python.org/3/tutorial/index.html).
 
 ## Love on the first input
 
@@ -56,14 +56,16 @@ Introduction into procedural programming with Python. For more detailed intro, p
 27.5
 >>> 55 // 2
 27
+>>> print("Hello")
+Hello
 ```
 
 
 ### Collections
 
 * Strings
-* (few) operators (*, +, in), many methods
 * fStrings
+* (few) operators (*, +, in), many methods
 * immutable
 * [tutorial: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 
