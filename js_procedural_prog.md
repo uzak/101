@@ -109,6 +109,7 @@ undefined
 
 ### String
 * complex data type
+* enclose with either `"` or `'` for definition.
 * what the user enters via `prompt()` is always a string (even if the enters a number).
 ```js
 > prompt = require("prompt-sync")();
@@ -369,13 +370,65 @@ undefined
 5
 5
 ```
+* for, for of, for of
+```js
+> for (let i=0; i<3; i++) {
+... console.log(i)
+... }
+0
+1
+2
+undefined
+>
+> let fruits = ["banana", "orange", "apple"]
+undefined
+> for (let fruit of fruits) {
+...  console.log(fruit)
+... }
+banana
+orange
+apple
+undefined
+
+> let person = {
+... name: "Peter",
+... age: 21,
+... profession: "IT expert",
+... }
+undefined
+> for (key in person) {
+... console.log(`${key} -> ${person[key]}`)
+... }
+name -> Peter
+age -> 21
+profession -> IT expert
+undefined
+```
 * break, continue
-* recursion
+```js
+> for (let fruit of fruits) {
+... console.log(fruit)
+... if (fruit === "banana") {
+..... break
+..... }
+... }
+banana
+undefined
+
+> for (let i=0; i<3; i++) {
+... if (i === 1) {
+..... continue      // let's go to next loop iteration
+..... }
+... console.log(i)
+... }
+0
+2
+undefined
+```
 * iteration
-* for, for of, for in
 
 **Exercises**
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+* Read about [while @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 
 ## Functions
 * Centerpiese of procedural programming
