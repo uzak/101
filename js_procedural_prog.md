@@ -464,6 +464,21 @@ undefined
 
 **Exercises**
 * Read about [while @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+* Create an infinite loop
+    * using `while`.
+    * using `for`.
+* Write a loop that will print out numbers from 1 to 10
+    * using `while`.
+    * using `for`.
+* Write a loop that will print out every number divisible by 3 (use modulo operator) from 1 to 100.
+* Create an array with the names of your hobbies. 
+    * Iterate through the array and print the index and the hobby.
+    * Iterate through your hobbies from the end of the list to the start.
+    * Iterate through your hobbies from the end of the list to the start printing every second hobby.
+* Create an object with the names of your friends. Key is the appropriate age. Have at least 5 in the list. Print out 
+    * the friends and their age sorted by the name alphabetically.
+    * the friends and their age sorted by the age.
+    * the names of 3 youngest friends.
 
 ## Functions
 * Centerpiece of procedural programming
