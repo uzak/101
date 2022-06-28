@@ -1,9 +1,11 @@
 # JavaScript: Procedural Programming 101
 
+
 ## Prerequisites
 
 * Install `node` and `npm`
 * Be able to access your browser's developer tools
+* Ideally an UNIX OS (Linux, MacOS)
 
 ## Fundamentals
 
@@ -14,16 +16,14 @@
 
 ### Flow of execution
 * Programmers direct the flow.
-* Computer starts at the top and works down to the bottom.
+* Computer starts at the top and works down to the bottom. 
 * Programer's job is to manage the complexity. The tool to achieve that in procedural programming is functions and modules.
 
 ### Expressions, Statements, REPL
 
 * Expression anything evaluated to produce a value.
-```
-node
-Welcome to Node.js v18.3.0.
-Type ".help" for more information
+* REPL: read-eval-print loop. Evaluates an expression and shows the result. E.g. node:
+```js
 > 5
 5
 > 5 + 5
@@ -31,7 +31,7 @@ Type ".help" for more information
 > Math.pow(5, 2) - 10/2
 20
 ```
-* Statement does something without producing a value. 
+* Statement does something without producing a value. In javascript this means the value `undefined` is produced.
 ```js
 > let result    // introduce a new variable without assigning it a value
 undefined
@@ -39,14 +39,28 @@ undefined
 Uncaught ReferenceError: nonExistingVariable is not defined
 ```
 * Each statement needs can optionally end with a semicolon (`;`).
-* REPL: read-eval-print loop
 
 ### CLI
 
 * terminal/console/command line
 * GUI vs. CLI
 * textual way of communicating with the computer
-* powerful
+* powerful. Learn basic commands:
+```sh
+$ pwd             # print current working directory
+/Users/m
+$ cd repos        # change into repos direcotry
+$ ls              # list it
+101      blog     dotfiles
+$ pwd
+/Users/m/repos
+$ cd              # go back to home
+$ pwd
+/Users/m
+```
+
+**Exercises**
+* Learn UNIX basics [here](https://linuxsurvival.com/).
 
 ## Variables
 
@@ -66,8 +80,8 @@ undefined
 
 ## IO
 
-* prompt()
-* console.log()
+* `prompt()`
+* `console.log()`
 ```bash
 $ npm instal prompt-sync    # install module 
 
@@ -75,8 +89,8 @@ added 3 packages, and audited 4 packages in 588ms
 
 found 0 vulnerabilities
 ```
-```
-$ cat test.js                             // code stored in a file
+```js
+$ cat test.js                             # code stored in a file
 prompt = require("prompt-sync")();        // load module
 
 let answer = prompt("What's your name: ") // ask the user 
@@ -319,6 +333,9 @@ true
 { name: 'Peter', age: 30 }
 ```
 
+**Exercise**
+* Create a program that will ask the user for the data about a person. The user can specify name, age, profession. Three persons can be entered. Store them in an array and log it to the console before the program exits.
+
 ### Set
 * A `Set` is a collection of unique values. There is no order defined for it. Value Lookups are very efficient.
 
@@ -351,6 +368,24 @@ undefined
 ... }
 big
 ```
+* [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (Not A Number) is a special datatype used for checking if the value is a number:
+```js
+> isNaN("hello")
+true
+> isNaN("5.5")
+false
+> let input = "42.01"  // something from the user
+undefined
+> if (!isNaN(input)) {
+... console.log("Your input is a valid number")
+... }
+Your input is a valid number
+undefined
+> NaN * 34
+NaN
+> NaN - NaN
+NaN
+```
 
 ## Loops
 * DRY -> automatization
@@ -379,7 +414,7 @@ undefined
 1
 2
 undefined
->
+
 > let fruits = ["banana", "orange", "apple"]
 undefined
 > for (let fruit of fruits) {
@@ -431,13 +466,21 @@ undefined
 * Read about [while @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 
 ## Functions
-* Centerpiese of procedural programming
+* Centerpiece of procedural programming
 * Divide and conquer
+* Example: 
+    * travel expense -> accountant -> money
+    * painter(room_color)
 * Procedure vs. function
 * logic of a program
 * [Builtin functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#function_properties)
 * namespace, universe on it's own
 * blackbox
+* anonymous/lambda/arrow functions 
+
+**Exercise**
+* Write a function that will sum two numbers and return the result.
+* Write a small program that will compute the circumference of a circle for the numbers 0 to 10. Make sure to create in it a function which computes the circumference.
 
 ### Custom functions
 * Magic, powerful words. Analogy: spell.
@@ -449,6 +492,13 @@ undefined
 ## Comments
 * The less the better
 * Hints where factoring a function could be useful
+```js
+> /* multiline
+... comments */
+undefined
+> // single line comments
+undefined
+```
 
 ## Error handling
 
@@ -463,6 +513,8 @@ undefined
 * 80x24
 * 0 -> great, 1 -> good, 2 -> OK, 3 and more -> too complex
 * Bulgarian constants
+* Step-by-Step
+* Debugging vs. console.log
 
 ## Resources
 
@@ -471,9 +523,6 @@ https://www.javascripttutorial.net/
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 
 
-https://javascript.info/
-
 # TODO
 * Control questions
-* Exercises to repeat
 * Basic formatting guidelines?
