@@ -68,7 +68,7 @@ $ pwd
 * naming super important
   * descriptive
   * qualification
-* english only
+* English only
 * camel case
 * let vs. var, const
 ```js
@@ -103,7 +103,7 @@ Hello Martin
 ```
 
 **Exercises:**
-* Write a program that asks the user for his age and print it out.
+* Write a program that asks the user for his age and prints it out.
 * Write a program that asks the user for his name and age and prints out both out.
 
 ## Data Types and Operators
@@ -169,7 +169,13 @@ undefined
 ```
 
 **Exercises**
-* Go [here](https://www.w3schools.com/jsref/jsref_obj_string.asp) and get acquinted with all the string methods. Test all of the methods at least with three different strings in `node`.
+* Go [here](https://www.w3schools.com/jsref/jsref_obj_string.asp) and get acquainted with all the string methods. Test all of the methods at least with three different strings in `node`.
+* Create a variable `name` with your name (containing both first and last name)
+    * split your name into two variables `firstName` and `lastName`
+        * using string's `slice()` method
+        * using string's `split()` method
+        * give out your name where your `lastName` is in upper case. Use string interpolation (string templates).
+    * print the length of the `name`
 
 ### Number
 * For the computer everything is a number. That's why it is a computer. Only we give it a different meaning (data type) and representation.
@@ -183,7 +189,7 @@ undefined
 2
 > 51 / 6
 8.5
-> 51 % 6
+> 51 % 6                  // modulo operator (division rest)
 3
 > Math.floor(51/6)        // round down
 8
@@ -224,6 +230,10 @@ undefined
 * Read [First Steps in Math in JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math])
 * Read [Number objectx reference](
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) and practice all the listed operations and properties of the `Number` object in `node`.
+* Assign your age to the variable `ageString` as string. Convert to integer and assign this value to the variable `age`.
+    * Increment your age using `+=` by 5 years.
+    * Decrement your age using `--` by 3 years.
+    * Compute the rest of the division when your age is now divided by 2. Print out the rest.
 
 ### Boolean
 * `true` and `false`
