@@ -5,13 +5,14 @@
 
 * Install `node` and `npm`
 * Be able to access your browser's developer tools
-* Ideally an UNIX OS (Linux, MacOS)
+* Ideally use an UNIX OS (Linux, MacOS)
 
 ## Fundamentals
 
 ### Syntax and Semantics
 
-* Gramar. A computer is a gramar nazi.
+* Gramar vs. semantics
+* Computer is a gramar nazi.
 * Computer doesn't think. Programmers (hopefully) do.
 
 ### Flow of execution
@@ -22,7 +23,9 @@
 ### Expressions, Statements, REPL
 
 * Expression anything evaluated to produce a value.
-* REPL: read-eval-print loop. Evaluates an expression and shows the result. E.g. node:
+* REPL: read-eval-print loop. Evaluates an expression and shows the result.
+    * Also called "interactive mode". 
+    * Useful to verify assumptions or as a calculator. E.g.:
 ```js
 > 5
 5
@@ -33,14 +36,14 @@
 ```
 * Statement does something without producing a value. In javascript this means the value `undefined` is produced.
 ```js
-> let result    // introduce a new variable without assigning it a value
+> let result            // introduce a new variable without assigning it a value
 undefined
-> nonExistingVariable
+> nonExistingVariable   // opposite to non-existing variable
 Uncaught ReferenceError: nonExistingVariable is not defined
 ```
-* Each statement needs can optionally end with a semicolon (`;`).
+* Each statement can optionally end with a semicolon (`;`).
 
-### CLI
+### CLI (optional)
 
 * terminal/console/command line
 * GUI vs. CLI
@@ -62,6 +65,13 @@ $ pwd
 **Exercises**
 * Learn UNIX basics [here](https://linuxsurvival.com/).
 
+### Before we really begin
+* Understanding is important. Computer doesn't think
+* Proceed Step-by-Step. Verify.
+    * `console.log()`
+    * debugging
+
+
 ## Variables
 
 * labeled container
@@ -69,12 +79,12 @@ $ pwd
   * descriptive
   * qualification
 * English only
-* camel case
+* camelCase
 * let vs. var, const
 ```js
-> const PI = 3.14;    // read-only
-undefined
 > let sum = 0;
+undefined
+> const PI = 3.14;    // read-only
 undefined
 ```
 
@@ -96,7 +106,7 @@ prompt = require("prompt-sync")();        // load module
 let answer = prompt("What's your name: ") // ask the user 
 console.log("Hello " + answer)            // print out the answer
 ```
-```bash
+```
 $ node test.js
 What's your name: Martin
 Hello Martin
@@ -124,7 +134,7 @@ undefined
 ### String
 * complex data type
 * enclose with either `"` or `'` for definition.
-* what the user enters via `prompt()` is always a string (even if the enters a number).
+* what the user enters via `prompt()` is always a string (even if he enters a number).
 ```js
 > prompt = require("prompt-sync")();
 > typeof prompt("Input: ")
@@ -157,6 +167,8 @@ false
 'MARTIN'
 > "one:two:three".split(":")    // split String into an array
 [ 'one', 'two', 'three' ]
+> "       test   ".trim()
+'test'
 ```
 * Strings are immutable!
 ```js
@@ -169,13 +181,14 @@ undefined
 ```
 
 **Exercises**
-* Go [here](https://www.w3schools.com/jsref/jsref_obj_string.asp) and get acquainted with all the string methods. Test all of the methods at least with three different strings in `node`.
+* Go [here](https://www.w3schools.com/jsref/jsref_obj_string.asp) and get acquainted with all the string methods. Test all of the methods at least with three different strings in `node`'s REPL.
 * Create a variable `name` with your name (containing both first and last name)
     * split your name into two variables `firstName` and `lastName`
         * using string's `slice()` method
-        * using string's `split()` method
+        * using string's `split()` and `trim()` methods
         * give out your name where your `lastName` is in upper case. Use string interpolation (string templates).
     * print the length of the `name`
+* Create a program that asks the user for any input. Print the first and the last character he enters.
 
 ### Number
 * For the computer everything is a number. That's why it is a computer. Only we give it a different meaning (data type) and representation.
@@ -222,9 +235,19 @@ undefined
 1
 > sum = sum + 2
 3
-> sum += 5      // works for any number operator with two operands
+> sum += 5      // works for any math operator with two operands
 8
 ```
+* [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (Not A Number) is a special datatype used for indicating that the value is a number:
+```js
+> parseInt("this is a string")
+NaN
+> isNaN("hello")    // check if value is not a number
+true
+> isNaN("5.5")
+false
+```
+
 
 **Exercises**
 * Read [First Steps in Math in JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math])
@@ -234,6 +257,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
     * Increment your age using `+=` by 5 years.
     * Decrement your age using `--` by 3 years.
     * Compute the rest of the division when your age is now divided by 2. Print out the rest.
+* Ask the user for this age. Print out how many years are missing to the 100th birthday. Make sure to convert the number entered into an integer using `parseInt()`
 
 ### Boolean
 * `true` and `false`
@@ -247,7 +271,7 @@ true
 false
 > 3 >= 2
 true
-> "Yes" === "yes"     // case sensitive
+> "Yes" === "yes"     // case sensitivity
 false
 ```
 * logical operators (important for conditionals and loops)
@@ -272,12 +296,9 @@ undefined
 >
 ```
 
-**Exercises**
-* Write a program that asks the user for this name and age. It converts the age to a number and if it is between 13 and 19 it will print out his name and call him teenager.
-
-
 ### Array
 * Mutable collection of elements with a defined order
+* Can contain duplicates
 ```js
 > let numbers = [1, 2, 3, 4]
 undefined
@@ -299,11 +320,11 @@ undefined
 5
 > numbers
 [ 2, 3, 4, 9, 5 ]
-> numbers.pop()       // remove last from the end
+> numbers.pop()       // remove last element
 5
 > numbers
 [ 2, 3, 4, 9 ]
-> numbers.shift()     // remove first from the beginning
+> numbers.shift()     // remove first element
 2
 > numbers
 [ 3, 4, 9 ]
@@ -315,10 +336,11 @@ undefined
 
 **Exercises**
 * Read about [Arrays](https://javascript.info/array) and try out all methods and properties of `Arrays` in `node` at least three times.
+* Create a program that will ask the user for the ages of three friends. Print out the median and the average age of the friends.
 
 ### Object
 * An object is a collection of key value pairs. Keys are strings, values can be anything.
-
+* Also called "hashtable" or "dictionary" in other languages
 ```js
 > let person = {
 ...  name: "Peter",
@@ -327,7 +349,7 @@ undefined
 undefined
 > person
 { name: 'Peter', age: 30 }
-> person.age          // same as above
+> person.age
 30 
 > person.hobbies = ['Running', 'Cooking']   // values can be anything
 [ 'Running', 'Cooking' ]
@@ -344,10 +366,12 @@ true
 ```
 
 **Exercise**
-* Create a program that will ask the user for the data about a person. The user can specify name, age, profession. Three persons can be entered. Store them in an array and log it to the console before the program exits.
+* Create a program that will ask the user for the data about a person. The user can specify name, age, profession. Three persons can be entered. Store them in an array and print them alphabetically sorted by the name. to the console before the program exits.
 
 ### Set
-* A `Set` is a collection of unique values. There is no order defined for it. Value Lookups are very efficient.
+* A `Set` is a collection of unique values. 
+* There is no order defined - iteration order might be differnt each time.
+* Value Lookups are very efficient.
 
 ```js
 > let set = new Set()
@@ -378,24 +402,12 @@ undefined
 ... }
 big
 ```
-* [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (Not A Number) is a special datatype used for checking if the value is a number:
-```js
-> isNaN("hello")
-true
-> isNaN("5.5")
-false
-> let input = "42.01"  // something from the user
-undefined
-> if (!isNaN(input)) {
-... console.log("Your input is a valid number")
-... }
-Your input is a valid number
-undefined
-> NaN * 34
-NaN
-> NaN - NaN
-NaN
-```
+
+**Exercises**
+* Write a program that asks the user for this name and age. It converts the age to a number and if it is between 13 and 19 it will print out his name and call him teenager.
+    * Extend the program to call the user "child" if he's less than 13 years old and "adult" if he's more than 19 years old.
+    * Extend the program so that it will say "Invalid input. Please enter a number" in the case something other than a number is entered.
+
 
 ## Loops
 * DRY -> automatization
@@ -413,9 +425,9 @@ undefined
 3
 4
 5
-5
+5           // this 5 comes due to the last expression (i++). only visible in REPL
 ```
-* for, for of, for of
+* for
 ```js
 > for (let i=0; i<3; i++) {
 ... console.log(i)
@@ -423,8 +435,10 @@ undefined
 0
 1
 2
-undefined
-
+undefined       // undefined comes from the last console.log(i). Only visible in REPL
+```
+* for of (iterate through a collection)
+```js
 > let fruits = ["banana", "orange", "apple"]
 undefined
 > for (let fruit of fruits) {
@@ -434,7 +448,9 @@ banana
 orange
 apple
 undefined
-
+``` 
+* for in (iterate through object keys)
+```js
 > let person = {
 ... name: "Peter",
 ... age: 21,
@@ -483,9 +499,11 @@ undefined
 * Write a loop that will print out every number divisible by 3 (use modulo operator) from 1 to 100.
 * Create an array with the names of your hobbies. 
     * Iterate through the array and print the index and the hobby.
+        * Use `for`
+        * Use `for of`
     * Iterate through your hobbies from the end of the list to the start.
     * Iterate through your hobbies from the end of the list to the start printing every second hobby.
-* Create an object with the names of your friends. Key is the appropriate age. Have at least 5 in the list. Print out 
+* Create an object with the names of your friends as keys. The value the friend's age. Have at least 5 friends in the list. Print out 
     * the friends and their age sorted by the name alphabetically.
     * the friends and their age sorted by the age.
     * the names of 3 youngest friends.
@@ -503,16 +521,21 @@ undefined
 * blackbox
 * anonymous/lambda/arrow functions 
 
-**Exercise**
-* Write a function that will sum two numbers and return the result.
-* Write a small program that will compute the circumference of a circle for the numbers 0 to 10. Make sure to create in it a function which computes the circumference.
-
 ### Custom functions
 * Magic, powerful words. Analogy: spell.
 * Components: 
   1. name
   2. arguments (input)
   3. return value
+
+**Exercise**
+* Write a function that will sum two numbers and return the result.
+* Write a procedure that will print out the current time. 
+* Write a function without arguments that will return a random integer number up to 100.
+    * Make the upper range (previously 100) configurable by a parameter called `limit`.
+* Write a small program that will compute the circumference of a circle for the numbers 0 to 10. Make sure to create and use for this a function which computes the circumference.
+* Write a function that will compute the third side of a triangle. Use it to compute the side for a triangle with the sides 2 and 5. Pint out the result.
+
 
 ## Comments
 * The less the better
@@ -525,9 +548,17 @@ undefined
 undefined
 ```
 
-## Error handling
-
 ## Modules
+* Also called "library"
+* Collection of useful functions.
+* Use npm to install.
+
+```js
+> const fs = require("fs")                  // module for working with the FileSystem
+> fs.readFileSync("/etc/hostname", "utf8")  // read the file with the hostname
+'t480s\n'
+```
+
 
 ## Software Engineering
 
@@ -538,16 +569,16 @@ undefined
 * 80x24
 * 0 -> great, 1 -> good, 2 -> OK, 3 and more -> too complex
 * Bulgarian constants
-* Step-by-Step
-* Debugging vs. console.log
 
 ## Resources
 
-https://www.javascripttutorial.net/
+* https://www.javascripttutorial.net/
+* https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 
-
+<!--
 # TODO
+
 * Control questions
-* Basic formatting guidelines?
+* More exercises
+-->
