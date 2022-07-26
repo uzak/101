@@ -551,12 +551,40 @@ undefined
 ## Modules
 * Also called "library"
 * Collection of useful functions.
+* Namespace (see functions)
 * Use npm to install.
 
 ```js
 > const fs = require("fs")                  // module for working with the FileSystem
 > fs.readFileSync("/etc/hostname", "utf8")  // read the file with the hostname
 't480s\n'
+```
+
+### Custom Modules
+* [Module Pattern](https://javascript.plainenglish.io/data-hiding-with-javascript-module-pattern-62b71520bddd)
+
+```js
+function Person() {
+    let firstName = "John";
+    let lastName = "Peterson";
+    let age = 20;
+
+    var fullName = function() {
+        return `${firstName} ${lastName}`;
+    }
+
+    return {
+        firstName: firstName,
+        lastName: lastName,
+        age: age,
+        fullName: fullName
+    }
+}
+
+var person = Person();
+
+console.log(person.fullName());
+console.log(person.age);
 ```
 
 
