@@ -11,14 +11,14 @@
 
 ### Syntax and Semantics
 
-* Gramar vs. semantics
-* Computer is a gramar nazi.
+* Grammar vs. semantics
+* Computer is a grammar nazi.
 * Computer doesn't think. Programmers (hopefully) do.
 
 ### Flow of execution
 * Programmers direct the flow.
 * Computer starts at the top and works down to the bottom. 
-* Programer's job is to manage the complexity. The tool to achieve that in procedural programming is functions and modules.
+* Programmer's job is to manage the complexity. The tool to achieve that in procedural programming is functions and modules.
 
 ### Expressions, Statements, REPL
 
@@ -34,7 +34,7 @@
 > Math.pow(5, 2) - 10/2
 20
 ```
-* Statement does something without producing a value. In javascript this means the value `undefined` is produced.
+* Statement does something without producing a value. In Javascript this means the value `undefined` is produced.
 ```js
 > let result            // introduce a new variable without assigning it a value
 undefined
@@ -69,7 +69,9 @@ $ pwd
 * Understanding is important. Computer doesn't think
 * Proceed Step-by-Step. Verify.
     * `console.log()`
+    <!--
     * debugging
+    -->
 
 
 ## Variables
@@ -79,7 +81,7 @@ $ pwd
   * descriptive
   * qualification
 * English only
-* camelCase
+* camelCase (CAMEL_CASE for constants)
 * let vs. var, const
 ```js
 > let sum = 0;
@@ -513,7 +515,9 @@ undefined
 * Divide and conquer
 * Example: 
     * travel expense -> accountant -> money
+    <!--
     * painter(room_color)
+    -->
 * Procedure vs. function
 * logic of a program
 * [Builtin functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#function_properties)
@@ -527,6 +531,17 @@ undefined
   1. name
   2. arguments (input)
   3. return value
+
+**Example**
+```js
+// definition of a function
+function circleArea(radius) {
+    return Math.PI * radius * radius; 
+}
+
+// calling a function
+console.log(circleArea(5));
+```
 
 **Exercise**
 * Write a function that will sum two numbers and return the result.
@@ -560,6 +575,7 @@ undefined
 't480s\n'
 ```
 
+<!--
 ### Custom Modules
 * [Module Pattern](https://javascript.plainenglish.io/data-hiding-with-javascript-module-pattern-62b71520bddd)
 
@@ -586,6 +602,7 @@ var person = Person();
 console.log(person.fullName());
 console.log(person.age);
 ```
+-->
 
 
 ## Software Engineering
@@ -595,7 +612,7 @@ console.log(person.age);
 * Garbage in, garbage out
 * Clean programming
 * 80x24
-* 0 -> great, 1 -> good, 2 -> OK, 3 and more -> too complex
+* Complexity: 0 -> great, 1 -> good, 2 -> OK, 3 and more -> too complex
 * Bulgarian constants
 
 ## Resources
