@@ -52,7 +52,7 @@ Uncaught ReferenceError: nonExistingVariable is not defined
 ```sh
 $ pwd             # print current working directory
 /Users/m
-$ cd repos        # change into repos direcotry
+$ cd repos        # change into repos directory
 $ ls              # list it
 101      blog     dotfiles
 $ pwd
@@ -95,7 +95,7 @@ undefined
 * `prompt()`
 * `console.log()`
 ```bash
-$ npm instal prompt-sync    # install module 
+$ npm install prompt-sync    # install module 
 
 added 3 packages, and audited 4 packages in 588ms
 
@@ -342,7 +342,7 @@ undefined
 
 ### Object
 * An object is a collection of key value pairs. Keys are strings, values can be anything.
-* Also called "hashtable" or "dictionary" in other languages
+* Also called "hash table" or "dictionary" in other languages
 ```js
 > let person = {
 ...  name: "Peter",
@@ -368,11 +368,11 @@ true
 ```
 
 **Exercise**
-* Create a program that will ask the user for the data about a person. The user can specify name, age, profession. Three persons can be entered. Store them in an array and print them alphabetically sorted by the name. to the console before the program exits.
+* Create a program that will ask the user for the data about a person. The user can specify name, age, profession. Three persons can be entered. Store them in an array and print them alphabetically (sorted by the name) to the console before the program exits.
 
 ### Set
 * A `Set` is a collection of unique values. 
-* There is no order defined - iteration order might be differnt each time.
+* There is no order defined - iteration order might be different each time.
 * Value Lookups are very efficient.
 
 ```js
@@ -412,7 +412,7 @@ big
 
 
 ## Loops
-* DRY -> automatization
+* DRY -> automate
 * while
 ```js
 > let i = 0
