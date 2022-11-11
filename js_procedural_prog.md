@@ -213,10 +213,6 @@ undefined
 > Math.sqrt(9)            // square root
 3
 > (Math.sqrt(9) - 2) % 2  // expressions can be complex
-> "1"                     // string, not a number!
-'1'
-> parseInt("1")           // convert a string to a number
-1
 ```
 * Increment and decrement a variable
 ```js
@@ -242,12 +238,16 @@ undefined
 ```
 * [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (Not A Number) is a special datatype used for indicating that the value is a number:
 ```js
-> parseInt("this is a string")
-NaN
 > isNaN("hello")    // check if value is not a number
 true
 > isNaN("5.5")
 false
+> "1"                     // string, not a number!
+'1'
+> parseInt("1")           // convert a string to a number
+1
+> parseInt("this is a string")
+NaN
 ```
 
 

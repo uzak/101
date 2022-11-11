@@ -6,7 +6,7 @@
 ## Opening (10 min)
 * personal stories in the field of time mgmt by the mentors
     * if you can manage your person next step is to manage a team
-    * huge ambition -> no chaos allowed -> resource planing (finance, time)
+    * chaos -> order / efficiency / productivity 
 * goal of today: 
     * give you the tools for time mgmt
 * opening circle:
@@ -20,7 +20,7 @@
 ## Technique: mindsweeping (10 min)
 * Task (2 min): write down every task you have on the mind until the mind is empty
 * Background: 
-  * allows the mind to be creative
+  * allows the mind to be creative. chaos -> order. to create you need empty space. 
   * WRITE EVERYTHING DOWN (when it comes to your mind)
 * Task (7 min)
     * mindsweeping (continue)
@@ -37,10 +37,11 @@
 * Get the big picture
 * Start in the middle, sub-subjects are circular around the main topic
 * Center: my life (grow mushrooms from here):
-    * Subtopics: codecool, workpace, hobby, sport, family, friends, ...
+    * Subtopics: work, health/sport, heath/food, family, friends, edu...
     * Common thing in all the areas is that they all have to do you must do to reach your goal. But it allows you to focus.
     * Tasks are in imperative mode
 * Draw your mindmap. Use a different sheet of paper. Work alone.
+* Assign tasks from previous technique.
 * Questions:
     * Who wrote a new tasks?
     * Who identified a new area?
