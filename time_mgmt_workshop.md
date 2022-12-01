@@ -5,8 +5,8 @@
 
 ## Opening (10 min)
 * personal stories in the field of time mgmt by the mentors
-    * if you can manage your person next step is to manage a team
     * chaos -> order / efficiency / productivity 
+    * if you can manage your person next step is to manage a team
 * goal of today: 
     * give you the tools for time mgmt
 * opening circle:
