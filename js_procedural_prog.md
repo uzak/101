@@ -417,7 +417,7 @@ big
 ```js
 > let i = 0
 undefined
-> while (i < 5) {
+> while (i < 6) {
 ... console.log(i)
 ... i++
 ... }
